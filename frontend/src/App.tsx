@@ -5,7 +5,8 @@ import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [isOn, setIsOn] = useState(false);
 
   return (
     <>
@@ -28,6 +29,18 @@ function App() {
         >
           Count is {count}
         </button>
+      </section>
+      
+      <section id="center">
+    <div>
+      <button
+        type="button"
+        className="counter"
+        onClick={() => setIsOn((isOn) => !isOn)}
+        >
+          Switch is {isOn ? 'ON' : 'OFF'} 
+      </button>
+    </div>
       </section>
 
       <div className="ticks"></div>
